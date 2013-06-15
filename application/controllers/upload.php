@@ -11,7 +11,7 @@ class Upload extends CI_Controller {
 	function index()
 	{
 		// $this->load->view('admin/admin_home_view', array('error' => ' ' ));
-		$this->load->view('admin/admin_home_view');
+		$this->load->view('uploader_view');
 	}
 
 	function do_upload()
