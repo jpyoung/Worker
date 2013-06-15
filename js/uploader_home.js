@@ -1,5 +1,8 @@
 
 function ajaxFileUpload() {
+	
+	console.log("ajaxFileUpload function called.");
+	
 	$("#loading")
 	.ajaxStart(function(){
 		$(this).show();
