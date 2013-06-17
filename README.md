@@ -1,1 +1,1 @@
-In order for this site to work on your local host server make sure you change the "base_url" route in the application/config/config.php file. 
+In order for this site to work on your local host server make sure you change the "base_url" route in the application/config/config.php file.  Also, you must give the Upload_folder read write access permissions. 
