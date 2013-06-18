@@ -52,7 +52,7 @@ class Upload extends CI_Controller {
 			
 			$sout .= '<p>Campaign Type: ' . $bool . '</p>';
 			
-			$fakeURL = "http://imvix.com/test/GFG/MVIX_SITE_GFG/upload/" . $data['upload_data']['file_name'];
+			//$fakeURL = "http://imvix.com/test/GFG/MVIX_SITE_GFG/upload/" . $data['upload_data']['file_name'];
 			
 			$sendData = array('FILE_PATH'=> $fakeURL, 'START_DATE'=> $_POST['start_date'], 'STOP_DATE'=> $_POST['stop_date'], 'PERMANENT'=> $bool, 'TYPE'=> $data['upload_data']['image_type']);
 			

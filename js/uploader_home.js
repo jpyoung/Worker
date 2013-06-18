@@ -2,6 +2,8 @@
 function ajaxFileUpload() {
 	
 	console.log("ajaxFileUpload function called.");
+	console.log("the base url is: " + baseurl);
+	console.log("the image url is : " + image_base_url);
 	
 	$("#loading")
 	.ajaxStart(function(){
@@ -14,8 +16,8 @@ function ajaxFileUpload() {
 	$.ajaxFileUpload
 	(
 		{
-			//http://localhost/~youngbuck14188/FPM/index.php/admin/admin_home/doajaxfileupload
-			url: "http://localhost/~youngbuck14188/Worker/index.php/uploader/doajaxfileupload",
+			
+			url: baseurl + "uploader/doajaxfileupload",
 			secureuri:false,
 			fileElementId:'fileToUpload',
 			dataType: 'json',
@@ -50,7 +52,7 @@ function upload_manager_method() {
 	
 	var file_input = $("input#fileToUpload").val();
 	
-	var formated_file_url = "http://localhost/~youngbuck14188/Worker/Upload_folder/" + file_input;
+	var formated_file_url = image_base_url + "Upload_folder/" + file_input;
 	//submitUploadFile(formated_file_url);
 	return ajaxFileUpload();
 	

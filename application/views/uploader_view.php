@@ -9,6 +9,12 @@
 	<meta name="author" content="jack young">
 	<!-- Date: 2013-06-15 -->
 	
+	<script type="text/javascript">
+	  var baseurl = "<?php print base_url(); ?>index.php/";
+	  var image_base_url = "<?php print base_url(); ?>";
+	</script>
+	
+	
 	<script type="text/javascript" src="<?php echo base_url(); ?>js/uploader_home.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	
@@ -21,6 +27,13 @@
 	
 <input size="40" class="file" type="file" id="fileToUpload" name="fileToUpload"/>	
 <button type="submitNewFile" onclick="upload_manager_method();">Submit</button>
+
+
+<br/><br/>
+<p>Found files listed below:</p>
+
+
+
 
 </body>
 </html>
