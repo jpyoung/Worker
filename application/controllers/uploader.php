@@ -11,7 +11,63 @@ class Uploader extends CI_Controller {
 	
 	function index() {
 		
+		$this->gather_db_files();
+		
+		//$data["all_files"] = $this->gather_files_in_upload_directory();
+		$this->gather_files_in_upload_directory();
 		$this->load->view('uploader_view');
+	}
+	
+	
+	
+	function gather_db_files() {
+		$r = $this->db->get('files');
+		
+		print_r($r);
+	}
+	
+	
+	function gather_files_in_upload_directory() {
+		
+		
+		
+		echo "mehtod was called";
+		
+		$dir    = 'http://localhost/~youngbuck14188/Worker/Upload_folder/';
+	
+	if (is_dir($dir)) {
+		
+	echo "<p>Its a directory</p>";	
+	} else {
+		echo "<p>not a directory</p>";
+	}
+	
+	
+		// $files1 = scandir($dir);
+		// 	
+		// 	print_r($files1);
+		
+		//$this->load->helper('directory');
+		
+		//$map = directory_map($this->config->config["base_url"] . "Upload_folder");
+		
+		//$map = directory_map('/Worker/Upload_folder/', FALSE, TRUE);
+		
+		
+		//print_r($map);
+		
+		//return $map;
+		
+		// $dir = "http://localhost/~youngbuck14188/Worker/Upload_folder/";
+		// 
+		// $dd =  $this->config->config["base_url"] . "Upload_folder/";
+		// 	
+		// opendir($dd);		
+		// $files1 = scandir($dd);
+		// closedir($dd);
+		// 
+		// 
+		// return $files1;
 	}
 	
 

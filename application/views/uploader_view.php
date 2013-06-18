@@ -28,5 +28,12 @@
 <input size="40" class="file" type="file" id="fileToUpload" name="fileToUpload"/>	
 <button type="submitNewFile" onclick="upload_manager_method();">Submit</button>
 
+
+<br/><br/>
+<p>Found files listed below:</p>
+
+
+
+
 </body>
 </html>
